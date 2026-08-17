@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const nums = [-2, 5, 8, 2, 15, 1];
+
+      const findMax = (items) => {
+        let result = 0;
+        for (item of items) {
+          if (item > result) {
+            result = item;
+          }
+        }
+        return result;
+      };
+
+      console.log(findMax(nums));
+    </script>
+  </body>
+</html>

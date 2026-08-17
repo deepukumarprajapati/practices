@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const users = [
+        { name: "Dk", city: "Delhi" },
+        { name: "RKk", city: "Agra" },
+        { name: "ML", city: "Delhi" },
+        { name: "HY", city: "Mumbai" },
+      ];
+
+      // const result = Object.groupBy(users, (user) => {
+      //   return user.city;
+      // });
+      // console.log(result);
+
+      // const result = users.reduce((acc, item) => {
+      //   if (!acc[item.city]) {
+      //     acc[item.city] = acc[item.city] || [];
+      //   }
+      //   acc[item.city].push(item);
+      //   return acc;
+      // }, {});
+
+      function groupBy(userData) {
+        let obj = {};
+        for (user of userData) {
+          if (!(user.city in obj)) {
+            obj[user.city] = [];
+          }
+          obj[user.city].push(user);
+        }
+        return obj;
+      }
+
+      console.log(groupBy(users));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // Reverse string
+
+      const text = "Hello";
+
+      // const reverseText = (str) => {
+      //   let hold = "";
+      //   for (let i = str.length - 1; i >= 0; i--) {
+      //     hold += str[i];
+      //   }
+      //   return hold;
+      // };
+
+      if (!String.prototype.toCustomReverse) {
+        String.prototype.toCustomReverse = function () {
+          let str = "";
+          for (let i = this.length - 1; i >= 0; i--) {
+            str += this[i];
+          }
+
+          return str;
+        };
+      }
+
+      console.log(text.toCustomReverse());
+    </script>
+  </body>
+</html>

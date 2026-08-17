@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // Find two index value if add both that match targer value.
+      const data = [2, 5, 11, 15, 4, 7];
+      const findIndexTargetValue = (n, target) => {
+        let collect = [];
+        for (let i = 0; i < n.length; i++) {
+          for (let j = i + 1; j < n.length; j++) {
+            let sum = n[i] + n[j];
+            if (sum === target) {
+              collect.push([i, j]);
+            }
+          }
+        }
+        if (collect.length === 0) return "No match found";
+        return collect.length > 1 ? collect : collect[0];
+      };
+      console.log(findIndexTargetValue(data, 12));
+    </script>
+  </body>
+</html>
