@@ -9,6 +9,9 @@ import Main from "./pages/react/Main";
 import History from "./pages/react/History";
 import KeyFeatures from "./pages/react/KeyFeatures";
 import ReactJs from "./pages/react/ReactJs";
+import HookMain from "./pages/hooks/HookMain";
+import HooksTheory from "./pages/hooks/HooksTheory";
+import HookUseState from "./pages/hooks/HookUseState";
 
 const App = () => {
   return (
@@ -24,6 +27,11 @@ const App = () => {
           <Route path="/react" element={<Main />}>
             <Route index element={<ReactJs />} />
             <Route path="history" element={<History />} />
+            <Route path="keyfeatures" element={<KeyFeatures />} />
+          </Route>
+          <Route path="/hooks" element={<HookMain />}>
+            <Route index element={<HooksTheory />} />
+            <Route path="usestatehook" element={<HookUseState />} />
             <Route path="keyfeatures" element={<KeyFeatures />} />
           </Route>
         </Routes>

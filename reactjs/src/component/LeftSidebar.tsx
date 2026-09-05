@@ -1,4 +1,4 @@
-import { History, Home, LibraryAdd } from "@mui/icons-material";
+import { Home, LibraryAdd } from "@mui/icons-material";
 import {
   Drawer,
   Toolbar,
@@ -38,14 +38,20 @@ const LeftSidebar = () => {
                 <ListItemText primary={"Roadmap"} />
               </ListItemButton>
             </ListItem>
-          </List>
-          <List>
             <ListItem disablePadding>
               <ListItemButton component={Link} to={"/react"}>
                 <ListItemIcon>
                   <LibraryAdd />
                 </ListItemIcon>
                 <ListItemText primary={"What is Reacjs"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton component={Link} to={"/hooks"}>
+                <ListItemIcon>
+                  <LibraryAdd />
+                </ListItemIcon>
+                <ListItemText primary={"Hooks"} />
               </ListItemButton>
             </ListItem>
           </List>

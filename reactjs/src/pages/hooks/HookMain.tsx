@@ -1,16 +1,16 @@
 import { Button, Divider, Stack } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 
-const Main = () => {
+const HookMain = () => {
   return (
     <>
       <Stack direction="row" spacing={2}>
         <Button component={Link} to="">
-          Main
+          Definition
         </Button>
 
-        <Button component={Link} to="history">
-          History
+        <Button component={Link} to="usestatehook">
+          useState Hook
         </Button>
 
         <Button component={Link} to="keyfeatures">
@@ -25,4 +25,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default HookMain;
