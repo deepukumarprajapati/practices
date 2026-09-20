@@ -13,8 +13,11 @@ const HookMain = () => {
           useState Hook
         </Button>
 
-        <Button component={Link} to="keyfeatures">
-          Key Features
+        <Button component={Link} to="useeffecthook">
+          useEffect Hook
+        </Button>
+        <Button component={Link} to="usereducerhook">
+          useReducer Hook
         </Button>
       </Stack>
 

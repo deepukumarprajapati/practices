@@ -12,6 +12,10 @@ import ReactJs from "./pages/react/ReactJs";
 import HookMain from "./pages/hooks/HookMain";
 import HooksTheory from "./pages/hooks/HooksTheory";
 import HookUseState from "./pages/hooks/HookUseState";
+import HookUseEffect from "./pages/hooks/HookUseEffect";
+import HookUseReducer from "./pages/hooks/useRudcuer/HookUseReducer";
+import HookUseReducerWithForm from "./pages/hooks/useRudcuer/useReducerWIthForm";
+import HookUseReducerWithTodo from "./pages/hooks/useRudcuer/useReducerWIthTodo";
 
 const App = () => {
   return (
@@ -32,7 +36,14 @@ const App = () => {
           <Route path="/hooks" element={<HookMain />}>
             <Route index element={<HooksTheory />} />
             <Route path="usestatehook" element={<HookUseState />} />
-            <Route path="keyfeatures" element={<KeyFeatures />} />
+            <Route path="useeffecthook" element={<HookUseEffect />} />
+            <Route path="usereducerhook" element={<HookUseReducer />}>
+              <Route index element={<HookUseReducerWithForm />} />
+              <Route
+                path="usereducerwithtodo"
+                element={<HookUseReducerWithTodo />}
+              />
+            </Route>
           </Route>
         </Routes>
       </Box>
